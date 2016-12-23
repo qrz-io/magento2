@@ -10,14 +10,14 @@ class RoleLocator implements \Magento\Framework\Authorization\RoleLocatorInterfa
     /**
      * Authentication service
      *
-     * @var \Magento\Backend\Model\Auth\Session
+     * @var \Magento\Backend\Model\Auth\Session\Proxy
      */
     protected $_session;
 
     /**
-     * @param \Magento\Backend\Model\Auth\Session $session
+     * @param \Magento\Backend\Model\Auth\Session\Proxy $session
      */
-    public function __construct(\Magento\Backend\Model\Auth\Session $session)
+    public function __construct(\Magento\Backend\Model\Auth\Session\Proxy $session)
     {
         $this->_session = $session;
     }
