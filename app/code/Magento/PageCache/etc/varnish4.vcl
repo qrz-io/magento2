@@ -92,7 +92,6 @@ sub vcl_recv {
         if (req.url ~ "^/(pub/)?(media|static)/.*\.(ico|css|js|jpg|jpeg|png|gif|tiff|bmp|mp3|ogg|svg|swf|woff|woff2|eot|ttf|otf)$") {
         unset req.http.Https;
         unset req.http./* {{ ssl_offloaded_header }} */;
-        unset req.http.Cookie;
     }
 
     return (hash);
